@@ -27,7 +27,7 @@ end
 fun count-species(s :: TaxonomyTree) -> Number:
   if s.rank == "Species":
     1 + count-species-list(s.children)
-  else:0
+  else:count-species-list(s.children)
   end
 end
 
